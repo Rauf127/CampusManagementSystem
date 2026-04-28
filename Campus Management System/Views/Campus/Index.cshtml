@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Student>
+
+<div class="container">
+    <table class="table table-bordered table-striped table-hover mt-5">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Student ID</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Department</th>
+                <th>MonthlyFees</th>
+                <th>TotalCourseFees</th>
+                <th>Teacher</th>
+                <th>Actions</th> </tr>
+        </thead>
+
+        <tbody> 
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td> 
+                    <td>@item.Id</td>
+                    <td>@item.Email</td>
+                    <td>@item.Age</td>
+                    <td>@item.Department</td>
+                    <td>@item.MonthlyFees</td>
+                    <td>@item.TotalCourseFees</td>
+                    <td><span class="badge bg-primary">@item.AssignTeacher</span></td>
+
+                    <td>
+                        <a href="@Url.Action("EditStudent", "Campus", new { id = item.Id })" 
+                           class="btn btn-info btn-sm">Edit</a>
+
+                        <a href="@Url.Action("DeleteStudent", "Campus", new { id = item.Id })" 
+                           class="btn btn-danger btn-sm" 
+                           onclick="return confirm('Kya aap waqai delete karna chahte hain?')">Delete</a>
+                    </td>
+                </tr>             }
+        </tbody>
+    </table>
+</div>
