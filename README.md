@@ -13,7 +13,7 @@ The central hub where you can view all student records, search, and access actio
 # 2. Add New Student Form
 A clean, card-based form to enroll new students and assign them to Science or Arts departments.
 *(Center Note: `image_3e2278`)*
-![Add Student form with data filled for Abdul Rauf](/Project_UI_Design/image_3e2278.png)
+![Add Student form with data filled for Abdul Rauf](/Project_UI_Design/2914ecb6-0da3-42b9-8ec3-553ae3ba7d2e.png)
 
 # 3. Student Added Successfully (Table View)
 This view shows the updated list immediately after submitting the "Add Student" form. Note the fee calculation logic (e.g., Monthly Fees).
